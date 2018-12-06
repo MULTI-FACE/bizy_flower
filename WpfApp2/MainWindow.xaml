@@ -1,0 +1,76 @@
+﻿<Window
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        x:Class="WpfApp2.MainWindow"
+        mc:Ignorable="d"
+        Title="BizyFlower"
+        WindowStartupLocation="Manual"
+        AllowsTransparency="True" WindowStyle="None" Background="Transparent" Height="437.625" Width="412.028" Topmost="True"
+        Left="1220" Top="420">
+    <Window.Foreground>
+        <ImageBrush/>
+    </Window.Foreground>
+    <Window.BorderBrush>
+        <ImageBrush/>
+    </Window.BorderBrush>
+    <Window.Template>
+        <ControlTemplate TargetType="{x:Type Window}">
+            <Border x:Name="newBorder" Cursor="Arrow" >
+                <Border.Background>
+                    <ImageBrush ImageSource="Properties/цветок1.png"/>
+                </Border.Background>
+                <Grid>
+                    <TextBlock x:Name="textBlock" Height="Auto" TextWrapping="Wrap" Text="{Binding TickCounter,
+                                  RelativeSource={RelativeSource FindAncestor,
+                                                                 AncestorType={x:Type local:MainWindow}}}" Width="Auto" Margin="165,347,138,36.6" Foreground="#FF93C8D7" FontFamily="a_LCDNova" FontSize="48"/>
+                    <Button x:Name="play" Margin="94,266,252,110.6" Click="play_Click_1" >
+                        <Button.OpacityMask>
+                            <ImageBrush ImageSource="Properties/плей.png"/>
+                        </Button.OpacityMask>
+                        <Button.BorderBrush>
+                            <ImageBrush/>
+                        </Button.BorderBrush>
+                        <Button.Foreground>
+                            <ImageBrush/>
+                        </Button.Foreground>
+                        <Button.Background>
+                            <ImageBrush ImageSource="Properties/плей.png" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="stop" Margin="108,212,252,171.6" Click="stop_Click">
+                        <Button.OpacityMask>
+                            <ImageBrush ImageSource="Properties/стоп.png"/>
+                        </Button.OpacityMask>
+                        <Button.BorderBrush>
+                            <ImageBrush/>
+                        </Button.BorderBrush>
+                        <Button.Foreground>
+                            <ImageBrush/>
+                        </Button.Foreground>
+                        <Button.Background>
+                            <ImageBrush ImageSource="Properties/стоп.png" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="qa1" Margin="165,271,210,138.6" >
+                        <Button.OpacityMask>
+                            <ImageBrush ImageSource="Properties/вопрос.png"/>
+                        </Button.OpacityMask>
+                        <Button.BorderBrush>
+                            <ImageBrush/>
+                        </Button.BorderBrush>
+                        <Button.Foreground>
+                            <ImageBrush/>
+                        </Button.Foreground>
+                        <Button.Background>
+                            <ImageBrush ImageSource="Properties/вопрос.png" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                    <!--Элемент захвата и изменения размера - работает только для прямоугольных окон-->
+                </Grid>
+            </Border>
+        </ControlTemplate>
+    </Window.Template>
+</Window>      
