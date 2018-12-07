@@ -27,8 +27,8 @@ namespace WpfApp2
         public static readonly DependencyProperty TickCounterProperty = DependencyProperty.Register(
             "TickCounter", typeof(int), typeof(MainWindow), new PropertyMetadata(default(int)));
         string path = @"c:\windows\system32\drivers\etc\hosts";
-        string block = "block.txt";
-        string hosts_true = "hoststrue.txt";
+        string block = Properties.Resources.block;
+        string hosts_true = Properties.Resources.hoststrue;
 
         public MainWindow()
         {
@@ -76,15 +76,9 @@ namespace WpfApp2
         {
             try
             {
-                string block_str = string.Empty;
-                using (System.IO.StreamReader reader = System.IO.File.OpenText(block))
-                {
-                    block_str = reader.ReadToEnd();
-                    reader.Close();
-                }
                 using (System.IO.StreamWriter file = new System.IO.StreamWriter(path, false))
                 {
-                    file.WriteLine(block_str);
+                    file.WriteLine(block);
                     file.Close();
                 }
             }
@@ -106,15 +100,10 @@ namespace WpfApp2
         }
         private void Unlock()
         {
-            string hosts_true_str = string.Empty;
-            using (System.IO.StreamReader reader = System.IO.File.OpenText(hosts_true))
-            {
-                hosts_true_str = reader.ReadToEnd();
-                reader.Close();
-            }
+           
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(path, false))
             {
-                file.WriteLine(hosts_true_str);
+                file.WriteLine(hosts_true);
                 file.Close();
             }
 

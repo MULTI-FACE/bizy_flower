@@ -101,7 +101,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -143,7 +143,7 @@
     <Resource Include="Properties\block.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Properties\hoststrue.txt" />
+    <EmbeddedResource Include="Properties\hoststrue.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Debug\" />

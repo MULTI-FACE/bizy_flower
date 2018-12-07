@@ -22,7 +22,7 @@ namespace WpfApp2.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace WpfApp2.Properties {
         ///   Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WpfApp2.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace WpfApp2.Properties {
         ///   обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -83,7 +83,7 @@ namespace WpfApp2.Properties {
         ///0.0.0.0 cache1.c.youtube.com
         ///0.0.0.0 [остаток строки не уместился]&quot;;.
         /// </summary>
-        internal static string block {
+        public static string block {
             get {
                 return ResourceManager.GetString("block", resourceCulture);
             }
@@ -92,7 +92,7 @@ namespace WpfApp2.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap by {
+        public static System.Drawing.Bitmap by {
             get {
                 object obj = ResourceManager.GetObject("by", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -102,7 +102,7 @@ namespace WpfApp2.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap fy {
+        public static System.Drawing.Bitmap fy {
             get {
                 object obj = ResourceManager.GetObject("fy", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -123,7 +123,7 @@ namespace WpfApp2.Properties {
         ///# Additionally, comments (such as these) may be inserted on individual
         ///# lines or following th [остаток строки не уместился]&quot;;.
         /// </summary>
-        internal static string hoststrue {
+        public static string hoststrue {
             get {
                 return ResourceManager.GetString("hoststrue", resourceCulture);
             }
@@ -132,7 +132,7 @@ namespace WpfApp2.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap вопрос {
+        public static System.Drawing.Bitmap вопрос {
             get {
                 object obj = ResourceManager.GetObject("вопрос", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -142,7 +142,7 @@ namespace WpfApp2.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap плей {
+        public static System.Drawing.Bitmap плей {
             get {
                 object obj = ResourceManager.GetObject("плей", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -152,7 +152,7 @@ namespace WpfApp2.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap стоп {
+        public static System.Drawing.Bitmap стоп {
             get {
                 object obj = ResourceManager.GetObject("стоп", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -162,7 +162,7 @@ namespace WpfApp2.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap цветок {
+        public static System.Drawing.Bitmap цветок {
             get {
                 object obj = ResourceManager.GetObject("цветок", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -172,7 +172,7 @@ namespace WpfApp2.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap цветок_2_0 {
+        public static System.Drawing.Bitmap цветок_2_0 {
             get {
                 object obj = ResourceManager.GetObject("цветок_2_0", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -182,7 +182,7 @@ namespace WpfApp2.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap цветок1 {
+        public static System.Drawing.Bitmap цветок1 {
             get {
                 object obj = ResourceManager.GetObject("цветок1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));

@@ -35,7 +35,7 @@ namespace WpfApp2
             {
                 DateTime open = DateTime.Now;
                 DateTime sec = DateTime.Now;
-                while (((sec - open).TotalSeconds) < 15)
+                while (((sec - open).TotalSeconds) < 7)
                 { sec = DateTime.Now; }
                 Application.Current.Shutdown();
             }
