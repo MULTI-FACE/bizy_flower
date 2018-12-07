@@ -19,10 +19,13 @@ namespace WpfApp2
     /// </summary>
     public partial class Window1 : Window
     {
+        double screeHeight = SystemParameters.FullPrimaryScreenHeight;
+        double screeWidth = SystemParameters.FullPrimaryScreenWidth;
         public Window1()
         {
             InitializeComponent();
-            
+            this.Top = (screeHeight - 380.625);
+            this.Left = (screeWidth - 312.028);
 
         }
 

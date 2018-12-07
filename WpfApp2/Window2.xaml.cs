@@ -19,9 +19,13 @@ namespace WpfApp2
     /// </summary>
     public partial class Window2 : Window
     {
+        double screeHeight = SystemParameters.FullPrimaryScreenHeight;
+        double screeWidth = SystemParameters.FullPrimaryScreenWidth;
         public Window2()
         {
             InitializeComponent();
+            this.Top = (screeHeight - 380.625);
+            this.Left = (screeWidth - 312.028);
         }
 
         private void Window_MouseMove(object sender, MouseEventArgs e)

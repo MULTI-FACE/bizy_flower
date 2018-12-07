@@ -21,16 +21,21 @@ namespace WpfApp2
     /// </summary>
     public partial class MainWindow : Window
     {
+        double screeHeight = SystemParameters.FullPrimaryScreenHeight;
+        double screeWidth = SystemParameters.FullPrimaryScreenWidth;
         private DispatcherTimer _timer;
         public static readonly DependencyProperty TickCounterProperty = DependencyProperty.Register(
             "TickCounter", typeof(int), typeof(MainWindow), new PropertyMetadata(default(int)));
         string path = @"c:\windows\system32\drivers\etc\hosts";
-        string block = @"block.txt";
+        string block = "block.txt";
         string hosts_true = "hoststrue.txt";
 
         public MainWindow()
         {
             InitializeComponent();
+
+            this.Top = (screeHeight - 380.625);
+            this.Left = (screeWidth - 312.028);
             System.Diagnostics.Process.Start("rundll32.exe", "InetCpl.cpl,ClearMyTracksByProcess 255");
 
         }

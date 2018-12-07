@@ -61,6 +61,35 @@ namespace WpfApp2.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на ::1 vk.com
+        ///0.0.0.0			vk.com
+        ///::			vk.com
+        ///0.0.0.0			www.vk.com
+        ///::			www.vk.com
+        ///0:0:0:0:0:0:0:1 vk.com
+        ///0:0:0:0:0:0:0:1 www.vk.com
+        ///0.0.0.0 www.youtube.com
+        ///0.0.0.0 accounts.youtube.com
+        ///0.0.0.0 admin.youtube.com
+        ///0.0.0.0 admin-green-qa.youtube.com
+        ///0.0.0.0 admin-release-qa.youtube.com
+        ///0.0.0.0 ads.youtube.com
+        ///0.0.0.0 analytics.youtube.com
+        ///0.0.0.0 apiblog.youtube.com
+        ///0.0.0.0 artists.youtube.com
+        ///0.0.0.0 au.youtube.com
+        ///0.0.0.0 br.youtube.com
+        ///0.0.0.0 c.youtube.com
+        ///0.0.0.0 cache1.c.youtube.com
+        ///0.0.0.0 [остаток строки не уместился]&quot;;.
+        /// </summary>
+        internal static string block {
+            get {
+                return ResourceManager.GetString("block", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap by {
@@ -77,6 +106,26 @@ namespace WpfApp2.Properties {
             get {
                 object obj = ResourceManager.GetObject("fy", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на # Copyright (c) 1993-2006 Microsoft Corp.
+        ///#
+        ///# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+        ///#
+        ///# This file contains the mappings of IP addresses to host names. Each
+        ///# entry should be kept on an individual line. The IP address should
+        ///# be placed in the first column followed by the corresponding host name.
+        ///# The IP address and the host name should be separated by at least one
+        ///# space.
+        ///#
+        ///# Additionally, comments (such as these) may be inserted on individual
+        ///# lines or following th [остаток строки не уместился]&quot;;.
+        /// </summary>
+        internal static string hoststrue {
+            get {
+                return ResourceManager.GetString("hoststrue", resourceCulture);
             }
         }
         

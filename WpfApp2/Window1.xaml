@@ -7,8 +7,7 @@
         mc:Ignorable="d"
         Title="i find you :c"
         WindowStartupLocation="Manual"
-        AllowsTransparency="True" WindowStyle="None" Background="Transparent" Height="437.625" Width="412.028" Topmost="True"
-        Left="1220" Top="420">
+        AllowsTransparency="True" WindowStyle="None" Background="Transparent" Height="437.625" Width="412.028" Topmost="True">
     <Window.Foreground>
         <ImageBrush/>
     </Window.Foreground>

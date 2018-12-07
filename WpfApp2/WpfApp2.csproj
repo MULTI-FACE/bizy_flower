@@ -139,5 +139,11 @@
   <ItemGroup>
     <Resource Include="kjuj.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\block.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\hoststrue.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
