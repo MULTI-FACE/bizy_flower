@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp2", "WpfApp2\WpfApp2.csproj", "{2D2B6EFE-971F-49A5-8426-4C42BA9221EB}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupBF", "SetupBF\SetupBF.vdproj", "{A0FEB7D8-138F-42E8-A3D2-B34031E9CB00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{2D2B6EFE-971F-49A5-8426-4C42BA9221EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D2B6EFE-971F-49A5-8426-4C42BA9221EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D2B6EFE-971F-49A5-8426-4C42BA9221EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0FEB7D8-138F-42E8-A3D2-B34031E9CB00}.Debug|Any CPU.ActiveCfg = Debug
+		{A0FEB7D8-138F-42E8-A3D2-B34031E9CB00}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

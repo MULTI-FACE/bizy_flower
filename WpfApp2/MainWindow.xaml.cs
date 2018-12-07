@@ -33,7 +33,7 @@ namespace WpfApp2
         public MainWindow()
         {
             InitializeComponent();
-
+            Unlock();
             this.Top = (screeHeight - 380.625);
             this.Left = (screeWidth - 312.028);
             System.Diagnostics.Process.Start("rundll32.exe", "InetCpl.cpl,ClearMyTracksByProcess 255");
