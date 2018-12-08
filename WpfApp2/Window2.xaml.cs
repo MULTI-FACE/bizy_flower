@@ -18,16 +18,28 @@ namespace WpfApp2
     /// Логика взаимодействия для Window2.xaml
     /// </summary>
     public partial class Window2 : Window
-    {
+    {   /// <summary>
+        /// Логика взаимодействия для Window2.xaml
+        /// Переменный для замеры экрана и размещения windows2 формы 
+        /// </summary>
         double screeHeight = SystemParameters.FullPrimaryScreenHeight;
         double screeWidth = SystemParameters.FullPrimaryScreenWidth;
+        /// <summary>
+        /// Подгрузка объектов и размещения окна исходя из замеров
+        /// </summary>
         public Window2()
         {
             InitializeComponent();
             this.Top = (screeHeight - 380.625);
             this.Left = (screeWidth - 312.028);
         }
-
+        /// <summary>
+        /// Grid_MouseMove - метод отслеживающий перемещение мышки
+        /// После того, как пользователь сделал малейшее перемещение ПО отсчитывает 7 секунд от старта движения и завершает приложение
+        /// </summary>
+        /// <exception>
+        /// На случай провисания, чтобы исключить на этапе разработки перегрузку и в случае чего завршить приложение 
+        /// </exception>
         private void Window_MouseMove(object sender, MouseEventArgs e)
         {
             try

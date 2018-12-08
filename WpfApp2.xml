@@ -1,0 +1,301 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WpfApp2</name>
+    </assembly>
+    <members>
+        <member name="T:WpfApp2.Window1">
+            <summary>
+            Window1
+            </summary>
+        </member>
+        <member name="F:WpfApp2.Window1.screeHeight">
+            <summary>
+            Логика взаимодействия для Window1.xaml
+            Переменный для замеры экрана и размещения windows1 формы 
+            </summary>
+        </member>
+        <member name="M:WpfApp2.Window1.#ctor">
+            <summary>
+            Подгрузка объектов и размещения окна исходя из замеров
+            </summary>
+        </member>
+        <member name="M:WpfApp2.Window1.Grid_MouseMove(System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Grid_MouseMove - метод отслеживающий перемещение мышки
+            После того, как пользователь сделал малейшее перемещение ПО отсчитывает 7 секунд от старта движения и завершает приложение
+            </summary>
+            <exception>
+            На случай провисания, чтобы исключить на этапе разработки перегрузку и в случае чего завршить приложение 
+            </exception>
+        </member>
+        <member name="M:WpfApp2.Window1.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WpfApp2.Window2">
+            <summary>
+            Логика взаимодействия для Window2.xaml
+            </summary>
+            <summary>
+            Window2
+            </summary>
+        </member>
+        <member name="F:WpfApp2.Window2.screeHeight">
+            <summary>
+            Логика взаимодействия для Window2.xaml
+            Переменный для замеры экрана и размещения windows2 формы 
+            </summary>
+        </member>
+        <member name="M:WpfApp2.Window2.#ctor">
+            <summary>
+            Подгрузка объектов и размещения окна исходя из замеров
+            </summary>
+        </member>
+        <member name="M:WpfApp2.Window2.Window_MouseMove(System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Grid_MouseMove - метод отслеживающий перемещение мышки
+            После того, как пользователь сделал малейшее перемещение ПО отсчитывает 7 секунд от старта движения и завершает приложение
+            </summary>
+            <exception>
+            На случай провисания, чтобы исключить на этапе разработки перегрузку и в случае чего завршить приложение 
+            </exception>
+        </member>
+        <member name="M:WpfApp2.Window2.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WpfApp2.App">
+            <summary>
+            Логика взаимодействия для App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:WpfApp2.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:WpfApp2.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:WpfApp2.MainWindow">
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="F:WpfApp2.MainWindow.screeHeight">
+            <summary>
+            Замеры экрана, переменный вынесены, как глобальный, чтобы в дальнейшем было удобно работать
+            screeHeight - высота экрана
+            screeHeight - ширина экрана
+            </summary>
+        </member>
+        <member name="F:WpfApp2.MainWindow._timer">
+            <summary>
+            Счетчик и взаимодействие get и set методов 
+            MainWindow.TickCounterProperty реализация взаимодействия счетчика, формы и обработки значений
+            Значение задаются только в случае вызов readomly
+            </summary>
+        </member>
+        <member name="F:WpfApp2.MainWindow.path">
+            <summary>
+            Обозначение ресурсов в качестве переменных для удобства использования, так же путь к hosts файлу
+            path - путь к хост файлу
+            block - файл формата txt, где хранятся листинг для блокировки сайтов
+            hosts_true - файл того же формата, где хранится чистый файл хост, для восстановления 
+            </summary>
+        </member>
+        <member name="M:WpfApp2.MainWindow.#ctor">
+            <summary>
+            MainWindow - где идет подгрузка всех объектов, замеры экрана пользователя, расположение WPF и очистка журнала бразуера IE
+            Left - ширина экрана 
+            Top - длина экрана
+            </summary>
+        </member>
+        <member name="P:WpfApp2.MainWindow.TickCounter">
+            <summary>
+            TickCounter - аксессор для получение и записи данных о тике 
+            </summary>
+        </member>
+        <member name="P:WpfApp2.MainWindow.TickCounterProperty">
+            <summary>
+            Связка аксессора, тика и формы в формате public 
+            </summary>
+        </member>
+        <member name="M:WpfApp2.MainWindow.Timer_Tick(System.Object,System.EventArgs)">
+            <summary>
+            Timer_Tick метод осуществляющий тик и проверку окончания тайминга
+            Так же идет вызов разблокировки, закрытие существующей формы и вызов формы windows1, 
+            когда конечный пользователь не нарушил условия тайминга 
+            </summary>
+            <param name="sender"></param> переменная для связки таймера
+            <param name="e"></param> параметр не содержит данных
+        </member>
+        <member name="M:WpfApp2.MainWindow.play_Click_1(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            play_Click_1 метод обработывающий клик мыши по кнопки play
+            По щелчку запускает блокировщик и задается счетчик
+            </summary>
+        </member>
+        <member name="M:WpfApp2.MainWindow.Block_Timer">
+            <summary>
+            Block_Timer метод редактирующий данные в hosts файле
+            </summary>
+            <exception>
+            Обработчик, на случай, если пользователь использует приложение без надлежащих прав (администратора)
+            </exception>
+        </member>
+        <member name="M:WpfApp2.MainWindow.stop_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+             stop_Click метод отвечающий за клик по внопке stop 
+             Реализация разблокировки при помощи вызов метода Unlock, закрытия текущей формы и вызов формы windows1
+            </summary>
+            <param name="sender"></param> переменная для связки таймера
+            <param name="e"></param> параметр не содержит данных
+        </member>
+        <member name="M:WpfApp2.MainWindow.Unlock">
+            <summary>
+             Unlock метод возврата файла hosts к прежнему состоянию
+            </summary>
+        </member>
+        <member name="M:WpfApp2.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WpfApp2.Properties.Resources">
+            <summary>
+              Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+            </summary>
+        </member>
+        <member name="P:WpfApp2.Properties.Resources.ResourceManager">
+            <summary>
+              Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+            </summary>
+        </member>
+        <member name="P:WpfApp2.Properties.Resources.Culture">
+            <summary>
+              Перезаписывает свойство CurrentUICulture текущего потока для всех
+              обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+            </summary>
+        </member>
+        <member name="P:WpfApp2.Properties.Resources.block">
+             <summary>
+               Ищет локализованную строку, похожую на ::1 vk.com
+            0.0.0.0			vk.com
+            ::			vk.com
+            0.0.0.0			www.vk.com
+            ::			www.vk.com
+            0:0:0:0:0:0:0:1 vk.com
+            0:0:0:0:0:0:0:1 www.vk.com
+            0.0.0.0 www.youtube.com
+            0.0.0.0 accounts.youtube.com
+            0.0.0.0 admin.youtube.com
+            0.0.0.0 admin-green-qa.youtube.com
+            0.0.0.0 admin-release-qa.youtube.com
+            0.0.0.0 ads.youtube.com
+            0.0.0.0 analytics.youtube.com
+            0.0.0.0 apiblog.youtube.com
+            0.0.0.0 artists.youtube.com
+            0.0.0.0 au.youtube.com
+            0.0.0.0 br.youtube.com
+            0.0.0.0 c.youtube.com
+            0.0.0.0 cache1.c.youtube.com
+            0.0.0.0 [остаток строки не уместился]&quot;;.
+             </summary>
+        </member>
+        <member name="P:WpfApp2.Properties.Resources.by">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WpfApp2.Properties.Resources.fy">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WpfApp2.Properties.Resources.hoststrue">
+             <summary>
+               Ищет локализованную строку, похожую на # Copyright (c) 1993-2006 Microsoft Corp.
+            #
+            # This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+            #
+            # This file contains the mappings of IP addresses to host names. Each
+            # entry should be kept on an individual line. The IP address should
+            # be placed in the first column followed by the corresponding host name.
+            # The IP address and the host name should be separated by at least one
+            # space.
+            #
+            # Additionally, comments (such as these) may be inserted on individual
+            # lines or following th [остаток строки не уместился]&quot;;.
+             </summary>
+        </member>
+        <member name="P:WpfApp2.Properties.Resources.вопрос">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WpfApp2.Properties.Resources.плей">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WpfApp2.Properties.Resources.стоп">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WpfApp2.Properties.Resources.цветок">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WpfApp2.Properties.Resources.цветок_2_0">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WpfApp2.Properties.Resources.цветок1">
+            <summary>
+              Поиск локализованного ресурса типа System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -14,13 +14,19 @@ using System.Windows.Shapes;
 
 namespace WpfApp2
 {
-    /// <summary>
-    /// Логика взаимодействия для Window1.xaml
-    /// </summary>
+    
     public partial class Window1 : Window
     {
+        /// <summary>
+        /// Логика взаимодействия для Window1.xaml
+        /// Переменный для замеры экрана и размещения windows1 формы 
+        /// </summary>
         double screeHeight = SystemParameters.FullPrimaryScreenHeight;
         double screeWidth = SystemParameters.FullPrimaryScreenWidth;
+
+        /// <summary>
+        /// Подгрузка объектов и размещения окна исходя из замеров
+        /// </summary>
         public Window1()
         {
             InitializeComponent();
@@ -29,6 +35,14 @@ namespace WpfApp2
 
         }
 
+
+        /// <summary>
+        /// Grid_MouseMove - метод отслеживающий перемещение мышки
+        /// После того, как пользователь сделал малейшее перемещение ПО отсчитывает 7 секунд от старта движения и завершает приложение
+        /// </summary>
+        /// <exception>
+        /// На случай провисания, чтобы исключить на этапе разработки перегрузку и в случае чего завршить приложение 
+        /// </exception>
         private void Grid_MouseMove(object sender, MouseEventArgs e)
         {
             try

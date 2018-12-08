@@ -16,20 +16,38 @@ using System.Windows.Threading;
 
 namespace WpfApp2
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
-    {
+    {    /// <summary>
+         /// Замеры экрана, переменный вынесены, как глобальный, чтобы в дальнейшем было удобно работать
+         /// screeHeight - высота экрана
+         /// screeHeight - ширина экрана
+         /// </summary>
         double screeHeight = SystemParameters.FullPrimaryScreenHeight;
         double screeWidth = SystemParameters.FullPrimaryScreenWidth;
+        /// <summary>
+        /// Счетчик и взаимодействие get и set методов 
+        /// MainWindow.TickCounterProperty реализация взаимодействия счетчика, формы и обработки значений
+        /// Значение задаются только в случае вызов readomly
+        /// </summary>
         private DispatcherTimer _timer;
-        public static readonly DependencyProperty TickCounterProperty = DependencyProperty.Register(
+        private static readonly DependencyProperty tickCounterProperty = DependencyProperty.Register(
             "TickCounter", typeof(int), typeof(MainWindow), new PropertyMetadata(default(int)));
+        /// <summary>
+        /// Обозначение ресурсов в качестве переменных для удобства использования, так же путь к hosts файлу
+        /// path - путь к хост файлу
+        /// block - файл формата txt, где хранятся листинг для блокировки сайтов
+        /// hosts_true - файл того же формата, где хранится чистый файл хост, для восстановления 
+        /// </summary>
         string path = @"c:\windows\system32\drivers\etc\hosts";
         string block = Properties.Resources.block;
         string hosts_true = Properties.Resources.hoststrue;
 
+        /// <summary>
+        /// MainWindow - где идет подгрузка всех объектов, замеры экрана пользователя, расположение WPF и очистка журнала бразуера IE
+        /// Left - ширина экрана 
+        /// Top - длина экрана
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
@@ -40,12 +58,30 @@ namespace WpfApp2
 
         }
 
+
+        /// <summary>
+        /// TickCounter - аксессор для получение и записи данных о тике 
+        /// </summary>
         public int TickCounter
         {
             get { return (int)GetValue(TickCounterProperty); }
             set { SetValue(TickCounterProperty, value); }
         }
 
+
+        /// <summary>
+        /// Связка аксессора, тика и формы в формате public 
+        /// </summary>
+        public static DependencyProperty TickCounterProperty => tickCounterProperty;
+
+
+        /// <summary>
+        /// Timer_Tick метод осуществляющий тик и проверку окончания тайминга
+        /// Так же идет вызов разблокировки, закрытие существующей формы и вызов формы windows1, 
+        /// когда конечный пользователь не нарушил условия тайминга 
+        /// </summary>
+        /// <param name="sender"></param> переменная для связки таймера
+        /// <param name="e"></param> параметр не содержит данных
         private void Timer_Tick(object sender, EventArgs e)
         {
 
@@ -61,6 +97,11 @@ namespace WpfApp2
             }
         }
 
+
+        /// <summary>
+        /// play_Click_1 метод обработывающий клик мыши по кнопки play
+        /// По щелчку запускает блокировщик и задается счетчик
+        /// </summary>
         private void play_Click_1(object sender, RoutedEventArgs e)
         {
             //System.Diagnostics.Process.Start("rundll32.exe", "InetCpl.cpl,ClearMyTracksByProcess 1");
@@ -72,6 +113,13 @@ namespace WpfApp2
             Block_Timer();
         }
 
+
+        /// <summary>
+        /// Block_Timer метод редактирующий данные в hosts файле
+        /// </summary>
+        /// <exception>
+        /// Обработчик, на случай, если пользователь использует приложение без надлежащих прав (администратора)
+        /// </exception>
         private void Block_Timer()
         {
             try
@@ -88,7 +136,12 @@ namespace WpfApp2
             }
 
         }
-
+        /// <summary>
+        ///  stop_Click метод отвечающий за клик по внопке stop 
+        ///  Реализация разблокировки при помощи вызов метода Unlock, закрытия текущей формы и вызов формы windows1
+        /// </summary>
+        /// <param name="sender"></param> переменная для связки таймера
+        /// <param name="e"></param> параметр не содержит данных
         private void stop_Click(object sender, RoutedEventArgs e)
         {
             _timer.Stop();
@@ -98,6 +151,10 @@ namespace WpfApp2
             this.Close();
 
         }
+
+        /// <summary>
+        ///  Unlock метод возврата файла hosts к прежнему состоянию
+        /// </summary>
         private void Unlock()
         {
            
