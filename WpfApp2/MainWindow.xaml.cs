@@ -144,11 +144,18 @@ namespace WpfApp2
         /// <param name="e"></param> параметр не содержит данных
         private void stop_Click(object sender, RoutedEventArgs e)
         {
-            _timer.Stop();
-            Unlock();
-            Window1 window1 = new Window1();
-            window1.Show();
-            this.Close();
+            try
+            {
+                _timer.Stop();
+                Unlock();
+                Window1 window1 = new Window1();
+                window1.Show();
+                this.Close();
+            }
+            catch (Exception)
+            {
+                Application.Current.Shutdown();
+            }
 
         }
 
