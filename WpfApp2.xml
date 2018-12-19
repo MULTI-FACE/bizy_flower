@@ -247,6 +247,11 @@
               Поиск локализованного ресурса типа System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:WpfApp2.Properties.Resources.руководство_пользователя">
+            <summary>
+              Поиск локализованного ресурса типа System.Byte[].
+            </summary>
+        </member>
         <member name="P:WpfApp2.Properties.Resources.стоп">
             <summary>
               Поиск локализованного ресурса типа System.Drawing.Bitmap.

@@ -13,16 +13,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.Diagnostics;
 
 namespace WpfApp2
 {
 
     public partial class MainWindow : Window
-    {    /// <summary>
-         /// Замеры экрана, переменный вынесены, как глобальный, чтобы в дальнейшем было удобно работать
-         /// screeHeight - высота экрана
-         /// screeHeight - ширина экрана
-         /// </summary>
+    {
+        System.Diagnostics.Process myProcess = new Process();
+        /// <summary>
+        /// Замеры экрана, переменный вынесены, как глобальный, чтобы в дальнейшем было удобно работать
+        /// screeHeight - высота экрана
+        /// screeHeight - ширина экрана
+        /// </summary>
         double screeHeight = SystemParameters.FullPrimaryScreenHeight;
         double screeWidth = SystemParameters.FullPrimaryScreenWidth;
         /// <summary>
@@ -174,6 +177,7 @@ namespace WpfApp2
 
 
         }
+
     }
     }
 

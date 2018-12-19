@@ -54,20 +54,6 @@
                             <ImageBrush ImageSource="Properties/стоп.png" Stretch="Uniform"/>
                         </Button.Background>
                     </Button>
-                    <Button x:Name="qa1" Margin="165,271,210,138.6" >
-                        <Button.OpacityMask>
-                            <ImageBrush ImageSource="Properties/вопрос.png"/>
-                        </Button.OpacityMask>
-                        <Button.BorderBrush>
-                            <ImageBrush/>
-                        </Button.BorderBrush>
-                        <Button.Foreground>
-                            <ImageBrush/>
-                        </Button.Foreground>
-                        <Button.Background>
-                            <ImageBrush ImageSource="Properties/вопрос.png" Stretch="Uniform"/>
-                        </Button.Background>
-                    </Button>
                     <!--Элемент захвата и изменения размера - работает только для прямоугольных окон-->
                 </Grid>
             </Border>
